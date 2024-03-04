@@ -1,0 +1,18 @@
+[package]
+name = "tonic-build-extend"
+version = "0.1.0"
+authors = ["yjhtry <yjhtrying@gmail.com>"]
+edition = "2021"
+license = "MIT"
+documentation = "https://docs.rs/tonic-build-extend"
+repository = "https://github.com/yjhtry/tonic-build-extend"
+homepage = "https://github.com/yjhtry/tonic-build-extend#readme"
+description = """
+extend tonic-build to support multiple types_attributes and fields_attributes
+"""
+readme = "README.md"
+categories = ["tonic", "grpc", "build", "derive", "prost", "protobuf", "rust"]
+keywords = []
+
+[dependencies]
+tonic-build = "0.11.0"
