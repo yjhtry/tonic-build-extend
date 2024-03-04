@@ -11,7 +11,7 @@ description = """
 extend tonic-build to support multiple types_attributes and fields_attributes
 """
 readme = "README.md"
-categories = ["tonic", "grpc", "build", "derive", "prost", "protobuf", "rust"]
+categories = ["tonic", "grpc", "build", "protobuf" ]
 keywords = []
 
 [dependencies]
