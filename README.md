@@ -1,19 +1,38 @@
-# rust-lib-template
+# Tonic-build extend
 
-description of the crate
+This is a simple example of how to use extended functions of tonic-build.
 
-## How to use it
+## Usage
 
-```bash
-cargo generate --git https://github.com/tyrchen/rust-lib-template
+```rust
+use tonic_build_extend::BuilderExt;
+
+fn main() {
+    tonic_build::configure()
+        .out_dir("src/pb")
+        .types_attributes(
+            &[
+                "Struct1",
+                "Struct2",
+            ],
+            &[
+                "#[derive(derive_builder::Builder)]",
+                "#[builder(setter(into), default)]",
+            ],
+        )
+        .fields_attributes(
+            &["Struct.fieldName1", "Struct.fieldName2"],
+            &["start", "end"],
+            &["#[builder(setter(strip_option))]"],
+        )
+        .compile(&["./protos/pb.proto"], &["protos"])
+        .unwrap();
+
+    Command::new("cargo")
+        .args(["fmt"])
+        .output()
+        .expect("Failed to run cargo fmt");
+
+}
+
 ```
-
-Have fun with this crate!
-
-## License
-
-This project is distributed under the terms of MIT.
-
-See [LICENSE](LICENSE.md) for details.
-
-Copyright 2024 Tyr Chen
