@@ -8,7 +8,7 @@ release:
 	@cargo release tag --execute
 	@git cliff -o CHANGELOG.md
 	@git commit -a -n -m "Update CHANGELOG.md" || true
-	@git push origin master
+	@git push origin main
 	@cargo release push --execute
 
 update-submodule:
