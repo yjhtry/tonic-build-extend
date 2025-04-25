@@ -1,6 +1,6 @@
 [package]
 name = "tonic-build-extend"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["yjhtry <yjhtrying@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -11,7 +11,7 @@ description = """
 extend tonic-build to support multiple types_attributes and fields_attributes
 """
 readme = "README.md"
-categories = ["tonic", "grpc", "build", "protobuf" ]
+categories = ["tonic", "grpc", "build", "protobuf"]
 keywords = []
 
 [dependencies]
